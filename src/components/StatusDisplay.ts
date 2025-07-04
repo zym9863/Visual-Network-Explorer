@@ -1,7 +1,7 @@
 export class StatusDisplay {
-  private container: HTMLElement;
-  private statusElement: HTMLElement;
-  private logElement: HTMLElement;
+  private container!: HTMLElement;
+  private statusElement!: HTMLElement;
+  private logElement!: HTMLElement;
   private logs: string[] = [];
   private maxLogs = 10;
 

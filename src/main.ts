@@ -7,11 +7,11 @@ import { PerformanceMonitor } from './utils/PerformanceMonitor';
 import './tests/basic-tests';
 
 class VisualNetworkExplorer {
-  private sceneManager: SceneManager;
-  private protocolStack: ProtocolStack;
-  private networkTopology: NetworkTopology;
-  private statusDisplay: StatusDisplay;
-  private performanceMonitor: PerformanceMonitor;
+  private sceneManager!: SceneManager;
+  private protocolStack!: ProtocolStack;
+  private networkTopology!: NetworkTopology;
+  private statusDisplay!: StatusDisplay;
+  private performanceMonitor!: PerformanceMonitor;
   private currentMode: 'protocol' | 'network' = 'protocol';
 
   constructor() {

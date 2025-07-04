@@ -201,7 +201,7 @@ export class NetworkTopology {
     this.isAnimating = false;
   }
 
-  public async simulateDataRouting(targetUrl: string): Promise<void> {
+  public async simulateDataRouting(_targetUrl: string): Promise<void> {
     if (this.isAnimating) return;
     
     this.isAnimating = true;
@@ -229,7 +229,7 @@ export class NetworkTopology {
     this.isAnimating = false;
   }
 
-  private createPacket(color: number, label: string): THREE.Group {
+  private createPacket(color: number, _label: string): THREE.Group {
     const packetGroup = new THREE.Group();
     
     const geometry = new THREE.SphereGeometry(0.2, 16, 16);

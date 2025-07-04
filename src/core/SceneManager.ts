@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 
 export class SceneManager {
-  private scene: THREE.Scene;
-  private camera: THREE.PerspectiveCamera;
-  private renderer: THREE.WebGLRenderer;
+  private scene!: THREE.Scene;
+  private camera!: THREE.PerspectiveCamera;
+  private renderer!: THREE.WebGLRenderer;
   private container: HTMLElement;
   private animationId: number | null = null;
 

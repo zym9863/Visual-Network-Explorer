@@ -147,7 +147,7 @@ export class ProtocolStack {
     this.group.position.set(0, -this.layerInfos.length / 2, 0);
   }
 
-  private addLayerLabel(layer: THREE.Mesh, layerInfo: LayerInfo, index: number): void {
+  private addLayerLabel(layer: THREE.Mesh, layerInfo: LayerInfo, _index: number): void {
     // 创建文本纹理
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d')!;
@@ -247,7 +247,7 @@ export class ProtocolStack {
     }
 
     const targetY = this.layers[currentLayer].position.y;
-    const startY = currentLayer === this.layers.length - 1 ? targetY + 3 : dataPacket.position.y;
+    // const startY = currentLayer === this.layers.length - 1 ? targetY + 3 : dataPacket.position.y;
 
     // 移动到当前层
     this.animateToPosition(dataPacket, { x: 0, y: targetY, z: 0 }, 1000, () => {
