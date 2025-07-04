@@ -1,13 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>网络可视化探秘 - Visual Network Explorer</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="ui-container">
+        <h1>网络可视化探秘</h1>
+        <div id="controls">
+          <div class="control-group">
+            <h3>协议栈模型</h3>
+            <button id="show-tcp-ip">TCP/IP 模型</button>
+            <button id="show-osi">OSI 模型</button>
+            <button id="simulate-data">模拟数据传输</button>
+          </div>
+          <div class="control-group">
+            <h3>网络路由模拟</h3>
+            <input type="text" id="target-url" placeholder="输入目标网址 (例: www.example.com)" />
+            <button id="start-routing">开始路由模拟</button>
+          </div>
+          <div class="control-group">
+            <h3>视图控制</h3>
+            <button id="reset-camera">重置视角</button>
+            <button id="toggle-help">显示帮助</button>
+          </div>
+        </div>
+        <div id="help-panel" style="display: none;">
+          <h3>操作说明</h3>
+          <ul>
+            <li><strong>鼠标拖拽:</strong> 旋转视角</li>
+            <li><strong>滚轮:</strong> 缩放视图</li>
+            <li><strong>TCP/IP模型:</strong> 显示4层协议栈</li>
+            <li><strong>OSI模型:</strong> 显示7层协议栈</li>
+            <li><strong>数据传输:</strong> 模拟数据封装过程</li>
+            <li><strong>路由模拟:</strong> 模拟DNS查询和数据路由</li>
+          </ul>
+          <h3>快捷键</h3>
+          <ul>
+            <li><strong>1:</strong> 切换到TCP/IP模型</li>
+            <li><strong>2:</strong> 切换到OSI模型</li>
+            <li><strong>空格:</strong> 开始数据传输模拟</li>
+            <li><strong>R:</strong> 重置视角</li>
+            <li><strong>H:</strong> 显示/隐藏帮助</li>
+            <li><strong>P:</strong> 显示/隐藏性能监控</li>
+          </ul>
+        </div>
+      </div>
+      <div id="canvas-container"></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
