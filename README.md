@@ -1,3 +1,5 @@
+[English](./README_EN.md) | 简体中文
+
 # 网络可视化探秘 (Visual Network Explorer)
 
 一个基于 Three.js 的交互式 3D 网络协议栈和数据传输可视化应用。
